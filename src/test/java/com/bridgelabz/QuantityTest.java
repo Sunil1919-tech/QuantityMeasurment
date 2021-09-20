@@ -27,4 +27,21 @@ public class QuantityTest {
         Feet feet2 = null;
         Assertions.assertNotEquals(feet1, feet2);
     }
+
+    //testCase When DiffRef_Feet should return false
+    @Test
+    public void givenFeetFromDifferent_RefFeet_Equal_ShouldReturnFalse() {
+        Feet feet1 = new Feet(0.0);
+        Feet feet2 = new Feet(0.0);
+        boolean result = feet2 == feet1;
+        Assertions.assertFalse(result);
+    }
+
+    //testCase When SameRef_Feet should return True
+    @Test
+    public void givenFeetFromSameRef_Equal_ShouldReturnTrue() {
+        Feet feet = new Feet(0.0);
+        boolean result = feet == feet;
+        Assertions.assertTrue(result);
+    }
 }
