@@ -62,10 +62,28 @@ public class QuantityTest {
         Assertions.assertNotEquals(inch1, inch2);
     }
 
+    //testCase given Not Equal for Null Value
     @Test
     public void given0InchAndNullInch_ShouldReturnNotEqual() {
         Inch inch1=new Inch(0.0);
         Inch inch2=null;
         Assertions.assertNotEquals(inch1,inch2);
+    }
+
+    //testCase given same Ref_value should return true
+    @Test
+   public void givenInchFromSameRef_Equal_shouldReturnTrue() {
+        Inch inch=new Inch(1.0);
+        boolean result=inch==inch;
+        Assertions.assertTrue(result);
+    }
+    //testCase given Diff_ref value Should return false
+    @Test
+   public void givenInchFromDiffRef_Equal_shouldReturnFalse() {
+        Inch inch1=new Inch(1.0);
+        Inch inch2=new Inch(1.0);
+        boolean result=inch1==inch2;
+        Assertions.assertFalse(result);
+
     }
 }
