@@ -1,11 +1,5 @@
 package com.bridgelabz;
 
-import java.util.Objects;
-
-/**
- * declaring the Class Inch to call the value
- * Compare the Inch and Feet as well
- */
 public class Inch {
 
     private final double value;
